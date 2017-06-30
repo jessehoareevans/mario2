@@ -22,7 +22,7 @@ end
 
   def update
     @product = Product.find(params[:product_id])
-    @product = Task.find(params[:id])
+    @product = Review.find(params[:id])
 
     if product_params[:description] === "done_products"
       @product.update(done_products: true)
