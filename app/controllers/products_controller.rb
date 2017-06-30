@@ -26,6 +26,7 @@ class ProductsController < ApplicationController
     if @product.update(product_params)
       redirect_to products_path
     else
+      flash[:alert] = "fill out all required fields please!"
       render :edit
     end
   end
@@ -33,6 +34,7 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(product_params)
     if @product.save
+      flash[:notice] = "Product has been added."
       redirect_to products_path
     else
       render :new
