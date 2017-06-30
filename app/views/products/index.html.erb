@@ -1,3 +1,6 @@
+
+
+
 <h1>Products</h1>
 
 <h3>Here is a list of all the products we carry</h3>
@@ -6,5 +9,12 @@
     <li><%= link_to product.name, product_path(product) %></li>
   <% end %>
 </ul>
+<ul>
+  <% @most_reviews.each do |review| %>
+    <li><%= link_to review.author, most_reviews_products_path(review) %></li>
+  <% end %>
+</ul>
+
 
 <%= link_to "Add a product", new_product_path %>
+<br>
