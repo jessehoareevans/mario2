@@ -1,0 +1,27 @@
+<h1>Welcome to Mario's! Here is a list of some of our most popular products</h1>
+
+<h3>Most Reviewed product</h3>
+
+<div class="structure">
+
+  <ul>
+    <% @most_reviews.each do |product| %>
+      <li><%= link_to product.name, product_path(product) %></li>
+    <% end %>
+  </ul>
+
+  <h3>Most 3 Recently added products</h3>
+  <ul>
+    <% @most_recent.each do |product| %>
+    <li><%= link_to product.name, product_path(product) %></li>
+  <% end %>
+  </ul>
+
+  <h3>USA Products</h3>
+  <ul>
+    <% @usa.each do |product| %>
+    <li><%= link_to product.name, product_path(product) %></li>
+  <% end %>
+  </ul>
+
+</div>

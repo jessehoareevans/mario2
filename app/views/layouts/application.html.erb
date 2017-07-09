@@ -2,7 +2,7 @@
 <html>
   <head>
     <div class="container">
-      <title>MariosFood</title>
+      <title>Marios Food</title>
       <%= csrf_meta_tags %>
 
       <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -15,6 +15,10 @@
     <div class="container">
       <%= flash[:alert] %>
       <%= flash[:notice] %>
+
+      <p><%= link_to "Home", root_path %></p>
+      <p><%= link_to "Add a product", new_product_path %></p>
+      <p><%= link_to "All Products", products_path %></p>
 
       <%= yield %>
     </div>

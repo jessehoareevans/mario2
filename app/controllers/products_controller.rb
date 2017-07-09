@@ -3,19 +3,10 @@ class ProductsController < ApplicationController
     @products = Product.all
   end
 
-  def most_reviews
+  def home
     @most_reviews = Product.most_reviews
-    render :index
-  end
-
-  def most_recent
     @most_recent = Product.most_recent
-    render :index
-  end
-
-  def usa
     @usa = Product.usa
-    render :index
   end
 
   def show
