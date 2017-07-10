@@ -1,6 +1,6 @@
 # _Mario's Speciality Food_
 
-#### By _**Jesse Hoare Evansm**_
+#### By _**Jesse Hoare Evans**_
 
 ## Description
 
