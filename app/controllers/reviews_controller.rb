@@ -9,6 +9,8 @@ class ReviewsController < ApplicationController
     @review = @product.reviews.new(product_params)
     if @review.save
       redirect_to product_path(@review.product)
+      
+    CommentMailer.new_comment(@review).deliver_now
     else
       render :new
     end
